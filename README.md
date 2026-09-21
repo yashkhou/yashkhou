@@ -1,6 +1,6 @@
 # Yash
 
-I build local-first AI systems and operator software that turns messy workflows into tools people can actually use.
+I build local-first AI systems and operator software that turns messy workflows into tools people can actually use. Most of the time i make these for myself, but the I just decide to share them here.
 
 ## Selected work
 
