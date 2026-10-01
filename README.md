@@ -1,43 +1,31 @@
-# Yash
+<a href="https://yashkhou.com"><img src="https://yashkhou.com/assets/v3/og.jpg" alt="Yash Khoury: the proof layer for AI agents" width="100%"></a>
 
-I build applied AI systems around the parts that usually fail after the demo: tool execution, trust boundaries, replay, evals, observability, scheduling and operator workflows.
+### Agents say “done”. I build the tools that check.
 
-My work is mostly local-first and inspectable. I prefer deterministic cores, explicit failure modes and evidence you can verify over opaque orchestration.
+I'm Yash. I build open-source infrastructure that sits between an AI agent and the real world. It records what the agent did, checks what it claims, and pins down what it's allowed to call. Everything is local-first and model-agnostic, built on boring formats you can inspect.
 
-**[yashkhou.com](https://yashkhou.com/)** · [Projects](https://yashkhou.com/projects) · [@yashkhou on X](https://x.com/yashkhou)
+**[yashkhou.com](https://yashkhou.com/)** · [@yashkhou on X](https://x.com/yashkhou)
 
-## Core systems
+## The proof stack
 
-| Project | What it explores |
+| Project | What it proves |
 | --- | --- |
-| [Commander Plus](https://github.com/yashkhou/commander-plus) | A local-first agent workstation: MCP tools, reusable skills, durable workspaces, browser/computer control and persistent project context. |
-| [Glyph](https://github.com/yashkhou/glyph) | A semantic design system for AI-generated interfaces with constraints, stable IDs, diffs and deterministic rendering targets. |
-| [Verify](https://github.com/yashkhou/verify) | Verification infrastructure for AI-written artifacts, code and reversible actions. |
+| **[RunLedger](https://github.com/yashkhou/runledger)** | What the agent actually did. Tool calls, decisions and retries are hash-chained, so any edit, deletion or reordering breaks verification. |
+| **[BrowserProof](https://github.com/yashkhou/browserproof)** | That the browser really ended up where the agent claims. Explicit assertions, evidence hashes, CI exit codes. |
+| **[ActionMesh](https://github.com/yashkhou/actionmesh)** | What the agent is allowed to call. One typed contract per capability, served over MCP-style, HTTP and CLI. |
+| **[Verify](https://github.com/yashkhou/verify)** | That the output is right. Checks DOCX/XLSX/PPTX/PDF files, repos and reversible actions without trusting the generator. |
+| **[Agent Compat Lab](https://github.com/yashkhou/agent-compat-lab)** | That one repo tells Codex, Claude Code, Gemini CLI and OpenCode the same thing. Outputs SARIF. |
+| **[Agent Reliability Lab](https://github.com/yashkhou/agent-reliability-lab)** | Twelve deterministic tools for hardening agent infrastructure: MCP chaos, contract fuzzing, context firewalls, replay, evals and more. |
 
-## AI reliability lab
+```bash
+npm install github:yashkhou/runledger && npx runledger verify
+```
 
-A set of focused, dependency-light tools for testing and hardening agent infrastructure. Each repository is built around a small deterministic core with tests, CI, examples and tagged releases.
+## Also building
 
-| Project | Reliability boundary |
-| --- | --- |
-| [Context Firewall](https://github.com/yashkhou/context-firewall) | Provenance-aware trust boundaries and fail-closed checks before privileged actions. |
-| [Tool Contract Fuzzer](https://github.com/yashkhou/tool-contract-fuzzer) | Deterministic valid/invalid JSON-Schema cases, boundary mutations and shrinking. |
-| [MCP Chaos](https://github.com/yashkhou/mcp-chaos) | Deterministic JSON-RPC/MCP fault injection, method-scoped cadence and wire-level chaos testing. |
-| [Agent Replay](https://github.com/yashkhou/agent-replay) | Redacted, hash-chained agent event logs with integrity-aware deterministic replay. |
-| [Failure Corpus](https://github.com/yashkhou/failure-corpus) | Normalize, fingerprint and deduplicate failures into reusable regression corpora. |
-| [Handoff Spec](https://github.com/yashkhou/handoff-spec) | Canonical, digestible handoffs with authority boundaries and continuation invariants. |
-| [Toolgraph Profiler](https://github.com/yashkhou/toolgraph-profiler) | Critical paths, retries, fan-out, lock pressure and idle time in tool-call traces. |
-| [Agent Policy Compiler](https://github.com/yashkhou/agent-policy-compiler) | Explainable policy-as-code for deterministic allow/deny decisions. |
-| [Eval Capsule](https://github.com/yashkhou/eval-capsule) | Portable eval fixtures, assertions and integrity-checked reproducible archives. |
-| [Schema Evolution Guard](https://github.com/yashkhou/schema-evolution-guard) | Detect compatibility-breaking changes in evolving tool and API schemas. |
-| [Context Budgeter](https://github.com/yashkhou/context-budgeter) | Token allocation, duplicate detection and policy-collision analysis for prompt context. |
-| [Agent Scheduler Sim](https://github.com/yashkhou/agent-scheduler-sim) | Deterministic worker/retry/starvation simulation for agent scheduling policies. |
-
-## Product systems
-
-- [OpenRetention](https://github.com/yashkhou/openretention) — self-hosted customer-success software with explainable health scoring, churn risk, renewals and revenue-at-risk prioritisation.
-- [AI Real Estate CRM](https://github.com/yashkhou/ai-real-estate-crm) — evidence-aware CRM logic for property, owner and lead workflows with deterministic matching and voice-agent handoff.
-- [AI Product Sourcing Agent](https://github.com/yashkhou/ai-product-sourcing-agent) — marketplace-agnostic sourcing engine for query planning, normalization, deduplication and evidence-based ranking.
+- [Glyph](https://github.com/yashkhou/glyph): an experimental design language with memory, so agents can reason about structure instead of pixels.
+- [Commander Plus](https://github.com/yashkhou/commander-plus): a local-first agent workstation with MCP workspaces, reusable skills, browser control and persistent project context.
+- [OpenRetention](https://github.com/yashkhou/openretention): self-hosted customer-success software with explainable health scores and revenue-at-risk prioritisation.
 
 ## Recent upstream work
 
@@ -45,6 +33,4 @@ A set of focused, dependency-light tools for testing and hardening agent infrast
 - Reviewed [pydantic-ai #8969](https://github.com/pydantic/pydantic-ai/pull/8969), a regression fix preventing shared `StructuredDict` schema metadata from leaking between output types.
 - Added current-main implementation analysis to [MCP Python SDK #1933](https://github.com/modelcontextprotocol/python-sdk/issues/1933) around stdio ownership and process-stream lifecycle.
 
-## Current focus
-
-Agent infrastructure, evals and verification, local-first tooling, reliable computer use, and product systems where AI has to survive contact with real workflows.
+If one of these saves you a bad night, a ⭐ helps the next person find it.
