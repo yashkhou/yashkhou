@@ -1,0 +1,7 @@
+Fonts embedded in the README widgets, all under the SIL Open Font License 1.1 (https://openfontlicense.org):
+
+- Fraunces (fraunces-normal.woff2, fraunces-italic.woff2)
+- Onest (onest-normal.woff2)
+- Geist Mono (geist-mono.woff2)
+
+pack.json holds subsets of these fonts plus a small crop of josh-cutout.png. Rebuild it with tools/build_pack.py.

@@ -1,20 +1,20 @@
 <a href="https://yashkhou.com">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hello-dark.svg">
-    <img src="assets/hello-light.svg" width="100%" alt="Hi, I'm Josh. I build AI agents that take care of the routine work, and know when to hand over to a person.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/lab-dark.svg">
+    <img src="assets/lab-light.svg" width="100%" alt="Josh Khoury's live lab card: public contributions over the last eight weeks, where the commits went, merged pull requests, npm downloads and the latest push. Refreshed daily from the GitHub and npm APIs.">
   </picture>
 </a>
 
 I'm Josh, an applied AI builder in Dubai. My work sits where an AI agent meets real people: what it can safely handle by itself, what it should pass to a person, and proof afterwards of what it actually did.
 
-### How my agents decide
+### How my tools fit together
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/decide-dark.svg">
-  <img src="assets/decide-light.svg" width="100%" alt="Animated diagram: a customer message goes through six steps (read, protect data, understand, look up, check rules, decide) and is either answered or handed to a person with a note.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/run-dark.svg">
+  <img src="assets/run-light.svg" width="100%" alt="Animated illustration of one agent run: Commander Plus runs the tool calls, ActionMesh blocks a write to ~/.ssh/config that is outside its contract, RunLedger chains every step with a hash, BrowserProof confirms the browser landed on the claimed page and Verify checks the saved PDF. When block 3 of the ledger is edited after the run, the chain turns red from that block on and the run is flagged for a person.">
 </picture>
 
-Every message goes through six checks. If any step isn't sure, a person takes over with a note, so nobody has to start again.
+Each tool call is checked against its contract and written to a ledger that can't be quietly rewritten. The page and the file are checked instead of taking the agent's word for it. If anything doesn't add up, a person takes over.
 
 ### What I'm building
 
