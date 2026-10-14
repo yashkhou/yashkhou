@@ -1,36 +1,42 @@
-<a href="https://yashkhou.com"><img src="https://yashkhou.com/assets/v3/og.jpg" alt="Yash Khoury: the proof layer for AI agents" width="100%"></a>
+<a href="https://yashkhou.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hello-dark.svg">
+    <img src="assets/hello-light.svg" width="100%" alt="Hi, I'm Josh. I build AI agents that take care of the routine work, and know when to hand over to a person.">
+  </picture>
+</a>
 
-### Agents say “done”. I build the tools that check.
+I'm Josh, an applied AI builder in Dubai. My work sits where an AI agent meets real people: what it can safely handle by itself, what it should pass to a person, and proof afterwards of what it actually did.
 
-I'm Yash. I build open-source infrastructure that sits between an AI agent and the real world. It records what the agent did, checks what it claims, and pins down what it's allowed to call. Everything is local-first and model-agnostic, built on boring formats you can inspect.
+### How my agents decide
 
-**[yashkhou.com](https://yashkhou.com/)** · [@yashkhou on X](https://x.com/yashkhou)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/decide-dark.svg">
+  <img src="assets/decide-light.svg" width="100%" alt="Animated diagram: a customer message goes through six steps (read, protect data, understand, look up, check rules, decide) and is either answered or handed to a person with a note.">
+</picture>
 
-## The proof stack
+Every message goes through six checks. If any step isn't sure, a person takes over with a note, so nobody has to start again.
 
-| Project | What it proves |
+### What I'm building
+
+| | |
 | --- | --- |
-| **[RunLedger](https://github.com/yashkhou/runledger)** | What the agent actually did. Tool calls, decisions and retries are hash-chained, so any edit, deletion or reordering breaks verification. |
-| **[BrowserProof](https://github.com/yashkhou/browserproof)** | That the browser really ended up where the agent claims. Explicit assertions, evidence hashes, CI exit codes. |
-| **[ActionMesh](https://github.com/yashkhou/actionmesh)** | What the agent is allowed to call. One typed contract per capability, served over MCP-style, HTTP and CLI. |
-| **[Verify](https://github.com/yashkhou/verify)** | That the output is right. Checks DOCX/XLSX/PPTX/PDF files, repos and reversible actions without trusting the generator. |
-| **[Agent Compat Lab](https://github.com/yashkhou/agent-compat-lab)** | That one repo tells Codex, Claude Code, Gemini CLI and OpenCode the same thing. Outputs SARIF. |
-| **[Agent Reliability Lab](https://github.com/yashkhou/agent-reliability-lab)** | Twelve deterministic tools for hardening agent infrastructure: MCP chaos, contract fuzzing, context firewalls, replay, evals and more. |
+| **[Commander Plus](https://github.com/yashkhou/commander-plus-mcp)** | My daily driver. It extends [DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) so ChatGPT and other MCP clients can do real work on my Mac. 129,811 tool calls in its first three weeks. |
+| **[RunLedger](https://github.com/yashkhou/runledger)** | A tamper-evident record of what an agent actually did. Edit, delete or reorder one step and verification fails. |
+| **[Verify](https://github.com/yashkhou/verify)** | Checks an agent's output without trusting the agent: documents, code and reversible actions. Three packages on [npm](https://www.npmjs.com/~joshuakhoury). |
+| **[BrowserProof](https://github.com/yashkhou/browserproof)** | Proves a browser agent really ended up where it says it did. |
+| **[ActionMesh](https://github.com/yashkhou/actionmesh)** | One typed contract for each thing an agent is allowed to call. |
+| **[Agent Reliability Lab](https://github.com/yashkhou/agent-reliability-lab)** | Twelve small tools that break agent infrastructure on purpose, before production does. |
+| **[Glyph](https://github.com/yashkhou/glyph)** | An experiment: a design language agents can reason about, instead of pixels. |
 
-```bash
-npm install github:yashkhou/runledger && npx runledger verify
-```
+### How I work
 
-## Also building
+I design the system and plan each feature. AI coding agents type most of the code. I review what they write, test it hard, and fix what they get wrong myself.
 
-- [Glyph](https://github.com/yashkhou/glyph): an experimental design language with memory, so agents can reason about structure instead of pixels.
-- [Commander Plus](https://github.com/yashkhou/commander-plus): a local-first agent workstation with MCP workspaces, reusable skills, browser control and persistent project context.
-- [OpenRetention](https://github.com/yashkhou/openretention): self-hosted customer-success software with explainable health scores and revenue-at-risk prioritisation.
+### Lately, upstream
 
-## Recent upstream work
+- **Merged:** a `/warden` rules command in [pi-warden #82](https://github.com/DevMortimer/pi-warden/pull/82)
+- **Merged:** broken README links fixed in [Stellar-agentic #429](https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/429)
+- **Reviewed:** a schema leak between output types in [pydantic-ai #8969](https://github.com/pydantic/pydantic-ai/pull/8969)
+- **Open:** an installable agent skill for [cc-hooks-ts #455](https://github.com/sushichan044/cc-hooks-ts/pull/455)
 
-- Opened [Stellar-agentic #429](https://github.com/StellarAgent-AI-Agent-Payment-Rails/Stellar-agentic/pull/429) to repair repository-specific README links.
-- Reviewed [pydantic-ai #8969](https://github.com/pydantic/pydantic-ai/pull/8969), a regression fix preventing shared `StructuredDict` schema metadata from leaking between output types.
-- Added current-main implementation analysis to [MCP Python SDK #1933](https://github.com/modelcontextprotocol/python-sdk/issues/1933) around stdio ownership and process-stream lifecycle.
-
-If one of these saves you a bad night, a ⭐ helps the next person find it.
+**[yashkhou.com](https://yashkhou.com)** · [X](https://x.com/yashkhou) · [LinkedIn](https://www.linkedin.com/in/thebrokerjosh)
