@@ -2,10 +2,6 @@
  "activity": {
   "days": [
    [
-    "2026-09-01",
-    0
-   ],
-   [
     "2026-09-02",
     0
    ],
@@ -224,6 +220,10 @@
    [
     "2026-10-26",
     0
+   ],
+   [
+    "2026-10-27",
+    0
    ]
   ],
   "year_total": 297
@@ -235,13 +235,13 @@
   "subject": "README: timestamped usage figure, clarify AI-agent scope"
  },
  "npm": {
-  "end": "2026-10-22",
+  "end": "2026-07-01",
   "packages": {
-   "yashkhou-action-guard": 38,
-   "yashkhou-artifact-verify": 40,
-   "yashkhou-repo-verify": 34
+   "yashkhou-action-guard": 0,
+   "yashkhou-artifact-verify": 0,
+   "yashkhou-repo-verify": 0
   },
-  "start": "2026-09-23"
+  "start": "2026-06-02"
  },
  "prs": {
   "own": 15,
@@ -272,5 +272,5 @@
    "name": "openretention"
   }
  ],
- "updated": "2026-10-26"
+ "updated": "2026-10-27"
 }
