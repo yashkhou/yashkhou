@@ -2,10 +2,6 @@
  "activity": {
   "days": [
    [
-    "2026-09-15",
-    0
-   ],
-   [
     "2026-09-16",
     0
    ],
@@ -224,24 +220,28 @@
    [
     "2026-11-09",
     0
+   ],
+   [
+    "2026-11-10",
+    3
    ]
   ],
-  "year_total": 297
+  "year_total": 300
  },
  "latest": {
-  "date": "2026-10-05T06:37:47Z",
-  "repo": "commander-plus-mcp",
-  "sha": "3d3a5fb",
-  "subject": "README: timestamped usage figure, clarify AI-agent scope"
+  "date": "2026-11-10T12:03:56Z",
+  "repo": "gulf-concierge-agent",
+  "sha": "34ab874",
+  "subject": "Hand check: Josh confirmed all 60 sampled labels; judge agreed 60/60"
  },
  "npm": {
-  "end": "2026-11-08",
+  "end": "2026-11-09",
   "packages": {
    "yashkhou-action-guard": 19,
-   "yashkhou-artifact-verify": 17,
+   "yashkhou-artifact-verify": 19,
    "yashkhou-repo-verify": 13
   },
-  "start": "2026-10-10"
+  "start": "2026-10-11"
  },
  "prs": {
   "own": 15,
@@ -272,5 +272,5 @@
    "name": "openretention"
   }
  ],
- "updated": "2026-11-09"
+ "updated": "2026-11-10"
 }
