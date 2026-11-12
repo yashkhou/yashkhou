@@ -2,10 +2,6 @@
  "activity": {
   "days": [
    [
-    "2026-09-17",
-    0
-   ],
-   [
     "2026-09-18",
     0
    ],
@@ -224,6 +220,10 @@
    [
     "2026-11-11",
     0
+   ],
+   [
+    "2026-11-12",
+    0
    ]
   ],
   "year_total": 300
@@ -235,13 +235,13 @@
   "subject": "Hand check: Josh confirmed all 60 sampled labels; judge agreed 60/60"
  },
  "npm": {
-  "end": "2026-11-10",
+  "end": "2026-11-11",
   "packages": {
    "yashkhou-action-guard": 17,
    "yashkhou-artifact-verify": 20,
-   "yashkhou-repo-verify": 13
+   "yashkhou-repo-verify": 11
   },
-  "start": "2026-10-12"
+  "start": "2026-10-13"
  },
  "prs": {
   "own": 15,
@@ -272,5 +272,5 @@
    "name": "openretention"
   }
  ],
- "updated": "2026-11-11"
+ "updated": "2026-11-12"
 }
